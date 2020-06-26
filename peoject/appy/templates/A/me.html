@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+   #er {
+background-color: #178787;
+color: #989898;
+border: 20px dotted #555555;
+width: 500px;
+height: 580;
+margin : auto;
+padding: 10px;
+}
+body{
+background: #191919;
+}
+#et{
+margin: 20px;
+pad
+float: right;
+}
+</style>
+
+</head>
+<body>
+
+{% load static%}
+<div id="er">
+    <h1>Hello, Welcome to my Page!</h1>
+<img src="{% static 'imgs/mee.jpg' %}"width="280 height="200">
+<ol id="et">
+    {% for x in ac %}
+   <h3> <li> <a href="/{{x.id}}/">{{x.name}}</a> </li></h3>
+    {% endfor %}
+</ol>
+</div>
+</body>
+</html>

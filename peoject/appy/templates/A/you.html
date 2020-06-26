@@ -1,0 +1,34 @@
+<style>
+    body{
+background: #191919;
+color: green;
+border: 20px solid orange;
+border-style: dotted;
+width: 500px;
+margin : auto;
+padding: 10px;
+}
+
+</style>
+
+<body>{%load static%}
+{% if c.pk is 1%}
+<div id="ee">
+<img class="1" src="{% static 'imgs/me.jpg' %}"  width="470" height="380" border="5px solid green"></div>
+
+    <h1><a href="https://www.google.com"> Go to Facebook Account of {{c.name}}   </a> </h1>
+    OR <h1> <a href=http://127.0.0.1:8000/> Go Back</a></h1>
+
+
+{% elif c.pk is 2%}
+<img src="{% static 'imgs/q.jpg' %}"width="200">
+<h1><a href="https://www.facebook.com"> Go to Facebook Account of {{c.name}}</a> </h1>
+ OR <h1> <a href=http://127.0.0.1:8000/> Go Back</a></h1>
+<h2>{{c.age}}</h2>
+{% elif c.pk is 3%}
+<img src="{% static 'imgs/r.jpg' %}"width="200">
+<h1><a href="https://www.viber.com">Go to Facebook Account of {{c.name}}</a> </h1>
+ OR <h1> <a href=http://127.0.0.1:8000/> Go Back</a></h1>
+<h2>{{c.age}}</h2>
+{%endif%}
+</body>
